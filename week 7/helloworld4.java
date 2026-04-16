@@ -1,22 +1,22 @@
 import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.annotation.WebServlet;
 
+@WebServlet("/hello")
 public class HelloWorld4 extends HttpServlet {
+
     /**
      * 
      */
     private static final long serialVersionUID = 1L;
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
+    protected void doGet(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
 
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
+        res.setContentType("text/html");
+        PrintWriter out = res.getWriter();
 
-        out.println("<html>");
-        out.println("<head><title>Hello World Servlet</title></head>");
-        out.println("<body>");
         out.println("<h1>Hello World</h1>");
-        out.println("</body>");
-        out.println("</html>");
     }
 }
