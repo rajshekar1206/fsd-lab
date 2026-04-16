@@ -1,10 +1,21 @@
+
 import java.io.*;
 import java.util.*;
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.annotation.WebServlet;
 
+@WebServlet("/logout")
 public class LogoutServlet extends HttpServlet {
-    public void doPost(HttpServletRequest request, HttpServletResponse response)
+
+    protected void doGet(HttpServletRequest request,
+            HttpServletResponse response)
+            throws ServletException, IOException {
+        doPost(request, response);
+    }
+
+    protected void doPost(HttpServletRequest request,
+            HttpServletResponse response)
             throws ServletException, IOException {
 
         response.setContentType("text/html");
@@ -17,16 +28,16 @@ public class LogoutServlet extends HttpServlet {
             Date startTime = (Date) session.getAttribute("startTime");
             Date endTime = new Date();
 
-            long duration = (endTime.getTime() - startTime.getTime()) / 1000; // seconds
+            long duration = (endTime.getTime() - startTime.getTime()) / 1000;
 
             session.invalidate();
 
-            out.println("<html><head><title>Logout</title></head><body>");
+            out.println("<html><body>");
             out.println("<h2>Thank You, " + name + "!</h2>");
             out.println("<p>You used the application for " + duration + " seconds.</p>");
             out.println("</body></html>");
         } else {
-            out.println("<html><body><h2>No active session found.</h2></body></html>");
+            out.println("<h2>No active session found.</h2>");
         }
     }
 }
