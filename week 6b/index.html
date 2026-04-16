@@ -1,0 +1,37 @@
+import React, { useState } from "react";
+
+function VotingApp() {
+
+const [votesA, setVotesA] = useState(0);
+const [votesB, setVotesB] = useState(0);
+
+const voteA = () => {
+setVotesA(votesA + 1);
+};
+
+const voteB = () => {
+setVotesB(votesB + 1);
+};
+
+const resetVotes = () => {
+setVotesA(0);
+setVotesB(0);
+};
+
+return (
+<div>
+    <h2>Voting Application</h2>
+
+    <h3>Candidate A: {votesA}</h3>
+    <button onClick={voteA}>Vote A</button>
+
+    <h3>Candidate B: {votesB}</h3>
+    <button onClick={voteB}>Vote B</button>
+
+    <br /><br />
+    <button onClick={resetVotes}>Reset</button>
+</div>
+);
+}
+
+export default VotingApp;

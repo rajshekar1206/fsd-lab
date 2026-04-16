@@ -1,0 +1,81 @@
+Week 2 b
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Newspaper Style Design</title>
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            margin: 30px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .news-container {
+            column-count: 2;
+            column-gap: 40px;
+        }
+
+        article {
+            break-inside: avoid;
+            margin-bottom: 30px;
+        }
+
+        article h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        article p {
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 10px;
+            border-top: 1px solid black;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>THE DAILY TIMES</h1>
+
+    <div class="news-container">
+        <article>
+            <h2>Technology is shaping future</h2>
+            <p>
+                Technology has become an essential part of modern life.
+                From Artificial Intelligence to cloud computing,
+                innovations are changing the way people work and communicate.
+            </p>
+        </article>
+
+        <article>
+            <h2>Education in Digital Era</h2>
+            <p>
+                Digital learning platforms have transformed education.
+                Online classes, labs, and smart classrooms
+                make learning more interactive.
+            </p>
+        </article>
+    </div>
+
+    <footer>
+        &copy; 2026 The Daily Times | All Rights Reserved
+    </footer>
+
+</body>
+
+</html>

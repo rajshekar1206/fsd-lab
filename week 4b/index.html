@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Star Rating</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        .star {
+            font-size: 30px;
+            cursor: pointer;
+            color: gray;
+        }
+
+        .active {
+            color: gold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Rating</h2>
+
+    <!-- Stars -->
+    <span class="star" data-value="1">&#9733;</span>
+    <span class="star" data-value="2">&#9733;</span>
+    <span class="star" data-value="3">&#9733;</span>
+    <span class="star" data-value="4">&#9733;</span>
+    <span class="star" data-value="5">&#9733;</span>
+
+    <script>
+        $(document).ready(function () {
+
+            $(".star").click(function () {
+                var value = $(this).data("value");
+
+                // Remove active class from all stars
+                $(".star").removeClass("active");
+
+                // Add active class up to selected star
+                $(".star").each(function () {
+                    if ($(this).data("value") <= value) {
+                        $(this).addClass("active");
+                    }
+                });
+
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

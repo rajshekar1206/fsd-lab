@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hide and Show</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #box {
+            background-color: lightblue;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="box">Hello students</div>
+    <p>The Hello students box will Hide and show for every 1000ms i.e., 1s</p>
+
+    <script>
+        $(document).ready(function () {
+            setInterval(function () {
+                $("#box").toggle();
+            }, 1000);
+        });
+    </script>
+
+</body>
+
+</html>
