@@ -1,3 +1,6 @@
+
+a) Write a JSP program to find a factorial of the given number.
+
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
     <!DOCTYPE html>
     <html>
