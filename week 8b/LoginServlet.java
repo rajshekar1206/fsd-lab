@@ -1,3 +1,8 @@
+1)reate a user validation web application using JSP, where the user submits the login
+name and password to the server. The name and password are checked against the data
+already available in database and if the data matches, a successfull login page is
+returned. Otherwise show a failure message to the user.
+
 package com.uday;
 
 import java.io.*;
